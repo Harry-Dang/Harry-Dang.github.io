@@ -1,0 +1,9 @@
+.Body {
+  height: 300px;
+  min-height: calc(100vh - (50px + 300px + 40px)); /* calculated from footer and nav*/
+  background-color: var(--bg-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

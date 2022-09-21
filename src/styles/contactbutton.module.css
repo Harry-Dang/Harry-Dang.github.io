@@ -1,0 +1,17 @@
+.Button {
+  width: 120px;
+  height: 60px;
+  background-color: var(--button-purple);
+  border-radius: 20px;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  margin: auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.Button:hover {
+  background-color: var(--button-hover-purple);
+}

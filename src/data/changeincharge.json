@@ -1,0 +1,67 @@
+[
+  {
+    "banner": "../images/ChangeInChargeBanner.png",
+    "title": "Change in Charge",
+    "sentence": "Two robot siblings need to reunite in a ruined steampunk landscape - help the siblings get back together by manipulating the charge of the robots and their surroundings.",
+    "paragraph": "As two robotic siblings roam a hazardous magnetic landscape in search of their parents, the impatient younger sibling constantly runs ahead, eager to continue the search. In this puzzle platformer, help the siblings get back together by manipulating the charge of the robots and eluding or exploiting magnetic charges in their surroundings. Explore different worlds and magnetic objects with each level to ultimately bring the two siblings together. The siblings can only reunite if they each have a different charge, so play strategically!",
+    "team": "Studio Baguette",
+    "members": [
+      {
+        "name": "Harry Dang",
+        "role": "Project Lead, Programmer"
+      },
+      {
+        "name": "Dubem Ogwulumba",
+        "role": "Programmer Lead"
+      },
+      {
+        "name": "Connie Liu",
+        "role": "Design Lead"
+      },
+      {
+        "name": "Matthew Guo",
+        "role": "Audio Lead"
+      },
+      {
+        "name": "Julie Helenek",
+        "role": "Programmer"
+      },
+      {
+        "name": "Jonna Chen",
+        "role": "Programmer"
+      },
+      {
+        "name": "Anna Nguyen",
+        "role": "Designer"
+      },
+      {
+        "name": "Anthony Sheehi",
+        "role": "Designer"
+      }
+    ],
+    "screenshots": [
+      {
+        "img": "../images/ChangeInCharge/screenshot-1.png",
+        "alt": ""
+      },
+      {
+        "img": "../images/ChangeInCharge/screenshot-2.png",
+        "alt": ""
+      },
+      {
+        "img": "../images/ChangeInCharge/screenshot-3.png",
+        "alt": ""
+      },
+      {
+        "img": "../images/ChangeInCharge/screenshot-4.png",
+        "alt": ""
+      },
+      {
+        "img": "../images/ChangeInCharge/screenshot-5.png",
+        "alt": ""
+      }
+    ],
+    "sidebarColor": "#FFCFCF",
+    "mainColor": "#CFE8FF"
+  }
+]

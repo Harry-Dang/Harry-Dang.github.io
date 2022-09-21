@@ -1,0 +1,108 @@
+.Experience {
+  padding-bottom: 48px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: minmax(1fr, 20px) 1fr 3fr;
+  gap: 12px;
+}
+
+/* Company */
+.Experience > h1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  font-size: 28px;
+}
+
+/* Position and date */
+.Experience > div {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+
+.Experience h2 {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.Experience .Position {
+  padding-right: 48px;
+}
+
+.Experience .Date {
+  font-weight: 500;
+}
+
+/* Description */
+.Experience > p {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+/* Image */
+.Experience > .Image {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  width: 128px;
+  height: 128px;
+}
+
+@media screen and (max-width: 1260px) {
+  .Experience {
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: minmax(1fr, 20px) 3fr 8fr;
+  }
+
+  /* Position and date */
+  .Experience > div {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+  }
+
+  .Experience > div > h2 {
+    margin: 2px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Experience .Position {
+    white-space: normal;
+  }
+
+  .Experience > .Image {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Experience .Date {
+    white-space: normal;
+  }
+  .Experience > p {
+    grid-column: 1 / 3;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Experience {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1fr, 64px) 1fr 1fr 2fr;
+  }
+
+  .Experience > .Image {
+    grid-row: 2;
+  }
+
+  .Experience > div {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .Experience > p {
+    grid-row: 4;
+  }
+}

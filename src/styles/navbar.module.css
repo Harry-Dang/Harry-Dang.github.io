@@ -1,0 +1,130 @@
+.Navbar {
+  box-sizing: content-box;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0,1fr));
+  padding: 20px;
+  min-height: 50px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Title name */
+.Navbar > h1 {
+  font-size: 40px;
+  color: whitesmoke;
+  grid-column: 2 / 10;
+  margin: auto 0;
+}
+
+.Navbar > h1 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* Navigation*/
+.Show, .Hidden {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  grid-column: 10;
+}
+
+.Show > li, .Hidden > li {
+  padding: 0 16px;
+}
+
+.Navbar ul a {
+  text-decoration: none;
+  font-size: 18px;
+  color: whitesmoke;
+  padding-bottom: 6px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.Navbar ul a:hover {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.Logo {
+  height: 24px;
+  width: 24px;
+}
+
+.Logo img {
+  object-fit: contain !important;
+}
+
+.Menu {
+  display: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  height: 64px;
+  font-size: 2em;
+}
+
+.Menu > * {
+  vertical-align: middle;
+}
+
+/* removes the social links */
+@media screen and (max-width: 1200px) {
+  .Social {
+    display: none;
+  }
+
+  .Navbar > h1 {
+    grid-row: 1;
+  }
+
+  .Show, .Hidden {
+    grid-column: 8 / 13;
+    grid-row: 1;
+  }
+}
+
+/* hamburger menu */
+@media screen and (max-width: 950px) {
+  .Navbar {
+    grid-template-rows: 2 1fr;
+  }
+
+  .Menu {
+    display: block;
+    grid-column: 11;
+  }
+
+  .Hidden, .Show {
+    padding: 24px 0;
+  }
+
+  .Hidden {
+    display: none;
+  }
+
+  .Show {
+    display: flex;
+    grid-row: 2;
+    grid-column: 2 / 13;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Navbar > h1 {
+    font-size: 24px;
+  }
+  .Hidden, .Show {
+    flex-direction: column;
+    grid-column: 7;
+  }
+
+  .Hidden > li, .Show > li {
+    padding: 12px 0;
+  }
+
+  .Menu {
+    font-size: 1.75em;
+  }
+}

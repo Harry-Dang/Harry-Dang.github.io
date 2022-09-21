@@ -1,0 +1,146 @@
+/* Header */
+.Header {
+  height: 180px;
+  background-color: var(--bg-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Header > h1 {
+  text-align: center;
+}
+
+.Header > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  list-style: none;
+  padding: 0 20vw;
+}
+
+.Header > ul > li {
+  margin: auto auto;
+  padding: 8px;
+}
+
+.Header > ul > li > a {
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  border-bottom: 1px transparent solid;
+  transition: border-bottom 0.3s;
+}
+
+.Header > ul > li > a:hover {
+  border-bottom: 1px black solid;
+}
+
+.Logos {
+  width: 36px;
+  height: 36px;
+  margin: auto;
+}
+
+.Logos img {
+  object-fit: contain !important;
+}
+
+/* images */
+.Photos {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: var(--bg-gray);
+}
+
+.Photos > li {
+  height: 35vh;
+  flex-grow: 1;
+}
+
+.Photos > li > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.Photos > li > img:hover {
+  cursor: zoom-in;
+}
+
+.Photos > li:last-child {
+  flex-grow: 10;
+}
+
+/* Gatsby Image */
+/* .Photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Container {
+  height: 40vh !important;
+  max-width: 100% !important;
+  width: 10px !important;
+}
+
+.Img {
+  object-fit: cover !important;
+} */
+
+/* Load more */
+.LoadMoreContainer {
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+  background-color: var(--bg-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoadMoreContainer > button {
+  width: 120px;
+  height: 60px;
+  border: none;
+  border-radius: 60px;
+  background-color: var(--button-purple);
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.LoadMoreContainer > button:hover {
+  background-color: var(--button-hover-purple);
+  cursor: pointer;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .Photo > li {
+    height: 30vh;
+  }
+}
+
+@media (max-height: 480px) {
+  .Photo > li {
+    height: 80vh;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .Photo > li > ul {
+    flex-direction: row;
+  }
+
+  .Photo > li {
+    height: auto;
+    width: 100%;
+  }
+  .Photo > li > ul img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
