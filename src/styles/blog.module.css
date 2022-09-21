@@ -1,8 +1,0 @@
-.Main {
-  height: calc(100vh - (50px + 300px + 128px + 40px)); /* calculated from footer and nav*/
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #D9D9D9;
-}
