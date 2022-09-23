@@ -73,6 +73,7 @@
 
 .Photos > li:last-child {
   flex-grow: 10;
+  width: 480px;
 }
 
 /* Gatsby Image */
@@ -117,19 +118,39 @@
   cursor: pointer;
 }
 
-@media (max-aspect-ratio: 1/1) {
+@media screen and (max-width: 540px) {
+  .Header > ul {
+    padding: 0;
+  }
+
+  .Header > ul > li {
+    padding: 2px;
+  }
+
+  .Logos {
+    width: 28px;
+    height: 28px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
   .Photo > li {
     height: 30vh;
   }
 }
 
-@media (max-height: 480px) {
+@media screen and (max-height: 480px) {
   .Photo > li {
     height: 80vh;
   }
+
+  .Photos > li:last-child {
+    width: 100%;
+  }
 }
 
-@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+@media screen and (max-aspect-ratio: 1/1) and (max-width: 480px) {
   .Photo > li > ul {
     flex-direction: row;
   }

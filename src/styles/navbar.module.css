@@ -106,8 +106,9 @@
 
   .Show {
     display: flex;
+    justify-content: space-around;
     grid-row: 2;
-    grid-column: 2 / 13;
+    grid-column: 1 / 13;
   }
 }
 
@@ -117,7 +118,8 @@
   }
   .Hidden, .Show {
     flex-direction: column;
-    grid-column: 7;
+    align-items: center;
+    grid-column: 1/ 13;
   }
 
   .Hidden > li, .Show > li {

@@ -54,7 +54,7 @@
 .Background {
   position: absolute !important;
   z-index: -1;
-  height: 100vh;
+  height: 125vh;
   width: 100%;
   background: linear-gradient(180deg, rgba(143,136,177,1) 0%, rgba(57,52,56,1) 100%);
   filter: brightness(50%);
@@ -62,6 +62,7 @@
 
 .BGImage {
   filter: blur(10px);
+  object-fit:cover !important;
 }
 
 /* Experience */
@@ -126,23 +127,21 @@
   .Intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
   }
 
   .Intro > h1 {
     text-align: center;
+    margin: 24px 0;
   }
 
   .Intro > .About {
-    padding: 4px 6px
+    padding: 4px 6px;
+    margin: 48px 0;
   }
 
   .Intro > .Contact {
-    margin: 0 auto;
+    margin: 24px auto;
   }
-}
-
-@media screen and (max-width: 300px) {
 }
 
 /* Experience */

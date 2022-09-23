@@ -18,17 +18,18 @@ function shuffleArray(array) {
 
 export default function Photos(props) {
   const photoData = props.data.allFile.edges; // get photo data
-  const [allPhotos, setAllPhotos] = useState(() => shuffleArray(photoData)); // shuffle photos
-  const [photos, setPhotos] = useState(allPhotos.slice(0, 15)); // load only the first portion
+  const [allPhotos, setAllPhotos] = useState(photoData); // shuffle photos
+  
+  const [count, setCount] = useState(20);
 
-  const [focusedImage, setFocusImage] = useState(""); // set the focused image
+  const [focusedImage, setFocusImage] = useState(""); // set the url of the focused image
 
   function focusImage(photo) {
     setFocusImage(photo.node.publicURL);
   }
 
   function loadMore() {
-    setPhotos([...photos, ...allPhotos.slice(photos.length, photos.length + 20)]);
+    setCount((count) => count + 15);
   }
 
   // grid layout based on
@@ -72,21 +73,25 @@ export default function Photos(props) {
         <main>
           <ul className={styles.Photos}>
             {
-              photos.map((photo) => 
-                <li key={photo.node.id}>
-                  <img
-                    src={photo.node.publicURL}
-                    alt=""
-                    loading="lazy"
-                    onClick={() => focusImage(photo)}
-                    onKeyPress={() => focusImage(photo)}
-                  />
-                </li>
+              allPhotos.slice(0, count).map(
+                (photo) => {
+                  return (
+                    <li key={photo.node.id}>
+                      <img
+                        src={photo.node.publicURL}
+                        alt=""
+                        loading="lazy"
+                        onClick={() => focusImage(photo)}
+                        onKeyPress={() => focusImage(photo)}
+                      />
+                    </li>
+                  )
+                }
               )
             }
             <li>
           {
-            photos.length < allPhotos.length ? (
+            count < allPhotos.length ? (
               <div className={styles.LoadMoreContainer}>
                 <button onClick={loadMore}>Load More</button>
               </div>
@@ -98,7 +103,7 @@ export default function Photos(props) {
       </Layout>
     </div>
   )
-
+  
   // return (
   //   <Layout title="Photos">
   //     <header className={styles.Header}>
@@ -133,7 +138,10 @@ export default function Photos(props) {
 
 export const query = graphql`
   query Photos {
-    allFile(filter: {relativeDirectory: {eq: "Photos"}}) {
+    allFile(
+      filter: {relativeDirectory: {eq: "Photos"}}
+      sort: {fields: relativePath, order: ASC}
+    ) {
       edges {
         node {
           childImageSharp {
